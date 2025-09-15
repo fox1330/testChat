@@ -38,10 +38,11 @@ function messageDisplay(doc){
   const sId = (data.name === usernameS?"container":"other")
   const ident = (data.name === usernameS?"Você": data.name)
   messageContainer.className = sId
+  const time = data.ts.toDate().toLocaleTimeString([]);
   name.className = "name-" + sId
   text.className = "text"
   text.textContent = data.text
-  name.textContent = ident
+  name.textContent = ident + `\n • \n` + time
   messageContainer.appendChild(name)
   messageContainer.appendChild(text)
   paragrafo.appendChild(messageContainer)
@@ -69,7 +70,7 @@ botaodel.addEventListener("click", async ()=>{
     await deleteDoc(doc(db, "chats", oc.id ))})
 })
 botao3.addEventListener("click", ()=>{
-  const change = false
+  const change = false;
   if(!usernameS || change == true){
   const name = input3.value.trim();
   if (!name) return alert("digite um nome")
@@ -87,7 +88,7 @@ botao.addEventListener("click", async (e)=> {
   await addDoc(collection(db, "chats"), {
         name: usernameS,
         text: valor,
-        ts: serverTimestamp()
+        ts: new Date()
   })
   paragrafo.scrollTop = paragrafo.scrollHeight
 })
