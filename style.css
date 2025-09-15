@@ -6,10 +6,14 @@
   --corMessage1: rgb(130,130,200);
   --corName1: rgb(50,50,75);
   --corMessage2: rgb(130,130,150);
-  --corName2: rgb(100,100,150);
+  --corName2: rgb(70,70,100);
   --corButtons: rgb(5,5,20);
   
-  --round: 10px;
+  --heightInputSizeVar: 2.5vh;
+  --buttonWidth: 24vw;
+  
+  
+  --round: 1vh;
 }
 body {
     font-family: Arial, sans-serif;
@@ -22,77 +26,61 @@ body {
         border: none;
         border-radius: var(--round);
         display: block;
-        margin: 2px;
+        margin: 0.5vh;
         width: fit-content;
-        max-width: 60%;
+        max-width: 52vw;
         overflow-wrap: break-word;
-        padding: 5px;
+        padding: 1vh;
         background-color: var(--corMessage1);
       }
-.other {
-  border: none;
+.other { 
+        border: none;
         border-radius: var(--round);
         display: block;
-        margin: 2px;
+        margin: 0.5vh;
         width: fit-content;
-        max-width: 50%;
+        max-width: 52vw;
         overflow-wrap: break-word;
-        padding: 5px;
-        background-color: var(--corMessage2);
+        padding: 1vh;
         align-self: flex-start;
-}
+        background-color: var(--corMessage2);
+      }
 .name-container { 
     padding: 2px;
-    font-size: 12px;
+    font-size: 1.5vh;
     color: var(--corName1);
 }
 .name-other { 
     padding: 2px;
-    font-size: 12px;
-    color: #2d2d2d;
+    font-size: 1.5vh;
+    color: var(--corName2);
 }
 .text { 
     padding: 2px;
+    font-size: 2vh;
 }
 
 #chat-container {
     width: 100%;
-    height: 90vh;
+    height: 92vh;
     max-width: 90%;
     background-color: var(--corContainer);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction:column;
-    padding: 20px;
+    padding: 2vh ;
     margin-bottom: 5px;
 }
 #header {
   padding-bottom: 20px;
 }
-#name-input{
-  padding: 10px;
-  border: none;
-  color: #ffffff35;
-  border-radius: 40px;
-  width:200px;
-  background-color: var(--corInputs);
-}
-#name-button  {
-    padding: 10px 15px;
-    background-color: var(--corButtons);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 #message-display {
   height: 100%;
     overflow-y: scroll;
-    border: 2px solid var(--corBorda);
+    border: 0.3vh solid var(--corBorda);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 2vh;
     background-color: var(--corDisplay) ;
     display: flex;
     align-items: flex-end;
@@ -101,13 +89,30 @@ body {
 #inputs {
   display: flex;
   flex-direction: row;
-  gap: 2px;
-  padding-top: 20px;
+  gap:0.7vh;
+  padding-top: 2vh;
+}
+#name-input {
+  height: var(--heightInputSizeVar);
+   max-width: 52vw;
+    padding: 1.5vh;
+    border: 1px ;
+    color: gray;
+    font-size: 1.5vh;
+    border-radius: 400px;
+    flex-grow: 1;
+    overflow-wrap: break-word;
+    min-width: 1px;
+    background-color: var(--corInputs);
+    
 }
 #message-input {
-    padding: 10px;
+  height: var(--heightInputSizeVar);
+   max-width: 52vw;
+    padding: 1.5vh;
     border: 1px ;
     color: white;
+    font-size: 1.5vh;
     border-radius: 400px;
     flex-grow: 1;
     overflow-wrap: break-word;
@@ -116,20 +121,32 @@ body {
     
 }
 #send-button  {
-    padding: 10px 15px;
+  padding: 2vh 6vw;
+  font-size: 1.5vh;
     background-color: var(--corButtons);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#name-button  {
+  padding: 1.5vh 5vw;
+  font-size: 1.5vh;
+    background-color: var(--corButtons);
+    color: white;
+    border: none;
+    border-radius: 1vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 #delete-button  {
-    padding: 10px 15px;
+  padding: 2vh 6vw;
+  font-size: 1.5vh;
     background-color: var(--corButtons);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 1vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
