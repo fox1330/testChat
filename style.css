@@ -1,0 +1,135 @@
+* {
+  --corContainer: rgb(22,25,37);
+  --corDisplay: rgb(20,19,31);
+  --corBorda: rgb(60,60,85);
+  --corInputs: rgb(10,10,20);
+  --corMessage1: rgb(130,130,200);
+  --corName1: rgb(50,50,75);
+  --corMessage2: rgb(130,130,150);
+  --corName2: rgb(100,100,150);
+  --corButtons: rgb(5,5,20);
+  
+  --round: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#101010 ;
+}
+.container { 
+        border: none;
+        border-radius: var(--round);
+        display: block;
+        margin: 2px;
+        width: fit-content;
+        max-width: 60%;
+        overflow-wrap: break-word;
+        padding: 5px;
+        background-color: var(--corMessage1);
+      }
+.other {
+  border: none;
+        border-radius: var(--round);
+        display: block;
+        margin: 2px;
+        width: fit-content;
+        max-width: 50%;
+        overflow-wrap: break-word;
+        padding: 5px;
+        background-color: var(--corMessage2);
+        align-self: flex-start;
+}
+.name-container { 
+    padding: 2px;
+    font-size: 12px;
+    color: var(--corName1);
+}
+.name-other { 
+    padding: 2px;
+    font-size: 12px;
+    color: #2d2d2d;
+}
+.text { 
+    padding: 2px;
+}
+
+#chat-container {
+    width: 100%;
+    height: 90vh;
+    max-width: 90%;
+    background-color: var(--corContainer);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction:column;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+#header {
+  padding-bottom: 20px;
+}
+#name-input{
+  padding: 10px;
+  border: none;
+  color: #ffffff35;
+  border-radius: 40px;
+  width:200px;
+  background-color: var(--corInputs);
+}
+#name-button  {
+    padding: 10px 15px;
+    background-color: var(--corButtons);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#message-display {
+  height: 100%;
+    overflow-y: scroll;
+    border: 2px solid var(--corBorda);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--corDisplay) ;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+#inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  padding-top: 20px;
+}
+#message-input {
+    padding: 10px;
+    border: 1px ;
+    color: white;
+    border-radius: 400px;
+    flex-grow: 1;
+    overflow-wrap: break-word;
+    min-width: 1px;
+    background-color: var(--corInputs);
+    
+}
+#send-button  {
+    padding: 10px 15px;
+    background-color: var(--corButtons);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#delete-button  {
+    padding: 10px 15px;
+    background-color: var(--corButtons);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
