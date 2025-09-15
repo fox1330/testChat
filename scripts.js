@@ -82,6 +82,7 @@ botao.addEventListener("click", async (e)=> {
   e.preventDefault;
   const valor = input.value.trim();
   if (!valor) return;
+  if (!usernameS) return alert("você precisa definir um nome para enviar mensagem.")
   input.value = ""
   await addDoc(collection(db, "chats"), {
         name: usernameS,
